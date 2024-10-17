@@ -22,3 +22,7 @@ vim.opt.listchars = {
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+end)

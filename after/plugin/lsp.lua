@@ -45,7 +45,6 @@ require('lspconfig').clangd.setup({
         opts.capabilities.offsetEncoding = { "utf-16" }
     end
 })
-require('lspconfig').mtcd.setup({})
 require('lspconfig').svelte.setup({
     cmd = { "svelte-language-server", "--stdio --allow-all" }
 })

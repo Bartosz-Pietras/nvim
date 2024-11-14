@@ -29,17 +29,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-require('lspconfig.configs').mtcd = {
-    default_config = {
-        cmd = { '/home/bpietras/.local/bin/mtcd' },
-        filetypes = { 'ttcn3' },
-        root_dir = require('lspconfig').util.root_pattern('package.yml'),
-        single_file_support = true,
-        settings = {},
-    }
-}
-
-
 require('lspconfig').clangd.setup({
     clangd = function (_, opts)
         opts.capabilities.offsetEncoding = { "utf-16" }
